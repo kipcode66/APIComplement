@@ -1,13 +1,13 @@
-/*
-  * NativeAPICompleter 1.0
-  *
-  * Author : Emir Khaled Belhaddad
-  * Copyright Open Source
-  * 
-  * Require :
-  * 
-  *
-  */
+/*!
+	* NativeAPICompleter 1.0
+	*
+	* Author : Emir Khaled Belhaddad
+	* Copyright Open Source
+	* 
+	* Require :
+	* 
+	*
+	*/
 document.isready = false;
 this.log = function() {
 	for(var arg in arguments){
