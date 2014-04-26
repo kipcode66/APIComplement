@@ -8,9 +8,6 @@
   * 
   *
   */
-/*parseFloat = function(no) {
-  return Math.round((Number(no)-parseInt(no))*1000000000000)/1000000000000
-};*/
 document.isready = false;
 this.log = function() {
 	for(var arg in arguments){
@@ -124,10 +121,6 @@ Object.prototype.concat = function(o1) {
 Object.prototype.concat.toString = function (){return "function concat(obj) { [native code] }";};
 Object.defineProperty(Object.prototype, 'concat', {enumerable: false,writable: false});
 
-/*Object.prototype.length = function(){
-	var count = 0,a = this;for(b in a){++count};
-	return count;
-};*/
 Object.defineProperty(Object.prototype, 'length', {get:function(){var count = 0,a = this;for(var b in a){++count}; return count;},set:function(value){},enumerable: false});
 
 Object.prototype.toArray = function (){
@@ -143,7 +136,6 @@ Object.defineProperty(Object.prototype, 'toArray', {enumerable: false,writable: 
 this.toAllChilds = function(obj,attr,val,contrainte) {
   for(var child in obj.children) {
     if(obj.children[child].toString() == "[object HTMLDivElement]" && (obj.children[child].className != "milieu_centre" || (contrainte != true))) {
-      //$(obj.children[child]).data(attr, val);
       if(obj.children[child].children.length > 0)
         toAllChilds(obj.children[child],attr,val,contrainte);
     }
